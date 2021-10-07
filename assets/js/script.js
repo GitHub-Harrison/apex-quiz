@@ -12,6 +12,7 @@ nextButton.addEventListener('click', () => {
     currentQuestion++
     nextQuestion()
 })
+
 //  function which runs the game
 function startGame() {
     startButton.classList.add('hidden')
@@ -59,7 +60,7 @@ function checkAnswer(event) {
     const selectedAnswer = event.target
     const correct = selectedAnswer.dataset.correct
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setClass(button, button.dataset.correct)
     })
     if (randomQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hidden')
@@ -70,8 +71,8 @@ function checkAnswer(event) {
 }
 
 // function to set the colours for both correct and incorrect answers (green = correct, red = incorrect)
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
+function setClass(element, correct) {
+    clearClass(element)
     if (correct) {
         element.classList.add('correct')
     } else {
@@ -80,7 +81,7 @@ function setStatusClass(element, correct) {
 }
 
 // function that removes the colour effect of getting the answer right or wrong
-function clearStatusClass(element) {
+function clearClass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 }
