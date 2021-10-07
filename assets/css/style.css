@@ -21,7 +21,7 @@ body {
     margin: 0;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--hue), 0%, 20%);
