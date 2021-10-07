@@ -119,5 +119,68 @@ const questions = [
             { text: '15', correct: false },
             { text: '18', correct: true }
         ]
+    },
+    {
+        question: 'How many weapons are in Apex Legends at the moment?',
+        answers: [
+            { text: '25', correct: false },
+            { text: '27', correct: true },
+            { text: '26', correct: false},
+            { text: '28', correct: false}
+        ]
+    },
+    {
+        question: 'How many maps does Apex Legends have?',
+        answers: [
+            { text: '1', correct: false },
+            { text: '3', correct: true },
+            { text: '4', correct: false },
+            { text: '2', correct: false }
+        ]
+    },
+    {
+        question: 'How much does Apex Legends cost?',
+        answers: [
+            { text: '£20', correct: false },
+            { text: '£30', correct: false },
+            { text: '£0', correct: true },
+            { text: '£10', correct: false }
+        ]
+    },
+    {
+        question: 'How many support characters are there?',
+        answers: [
+            { text: '2', correct: true },
+            { text: '5', correct: false },
+            { text: '8', correct: false },
+            { text: '11', correct: false }
+        ]
+    },
+    {
+        question: 'How many defensive characters are there?',
+        answers: [
+            { text: '6', correct: false },
+            { text: '4', correct: true },
+            { text: '2', correct: false },
+            { text: '0', correct: false}
+        ]
+    },
+    {
+        question: 'What is the "Digital Threat" attachment?',
+        answers: [
+            { text: 'A Character Name', correct: false },
+            { text: 'A Weapon Attachment', correct: false },
+            { text: 'A Weapon Optic', correct: true },
+            { text: 'An Armour Piece', correct: false }
+        ]
+    },
+    {
+        question: 'Which of these can currently be found as a level 4 item?',
+        answers: [
+            { text: 'Weapon Stocks', correct: false },
+            { text: 'Extended Weapon Magazines', correct: true },
+            { text: 'Barrel Stabilizer', correct: false },
+            { text: 'Shotgun Bolts', correct: false }
+        ]
     }
 ];
