@@ -25,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--hue), 0%, 20%);
+    text-align: center;
 }
 
 /* styling for the overall game area */
