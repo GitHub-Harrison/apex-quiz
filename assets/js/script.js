@@ -2,10 +2,9 @@ const startButton = document.getElementById('start-button')
 const nextButton = document.getElementById('next-button')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-button')
+const answerButtonsElement = document.getElementById('answer-buttons')
 
-
-let randomQuestions, currentQuestion
+let randomQuestions, currentQuestion;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -37,16 +36,16 @@ function getQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
-        button.addEventListener('click', selectAnswer)
+        button.addEventListener('click', checkAnswer)
         answerButtonsElement.appendChild(button)
     })
 }
 
 function reset() {
-    nextButton.classList.add('hide')
+    clearStatusClass(document.body)
+    nextButton.classList.add('hidden')
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
 }
 
@@ -58,12 +57,11 @@ function checkAnswer(event) {
         setStatusClass(button, button.dataset.correct)
     })
     if (randomQuestions.length > currentQuestion + 1) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hidden')
     } else {
         startButton.innerText = 'Play Again'
-        startButton.classList.remove('hide')
+        startButton.classList.remove('hidden')
     }
-    nextButton.classList.remove('hidden')
 }
 
 function setStatusClass(element, correct) {
@@ -84,6 +82,7 @@ function addScore() {
 
 }
 
+// Where the list of questions and answers are stored
 const questions = [
     {
         question: 'Who is this character?',

@@ -56,7 +56,7 @@ body.incorrect {
     outline: none;
 }
 
-.button::hover {
+.button:hover {
     border-color: black;
 }
 
