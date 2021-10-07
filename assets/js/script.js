@@ -1,53 +1,53 @@
-const startButton = document.getElementById('start-button')
-const nextButton = document.getElementById('next-button')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
 
 let randomQuestions, currentQuestion;
 
 // code to make the start and next button work
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currentQuestion++
-    nextQuestion()
-})
+    currentQuestion++;
+    nextQuestion();
+});
 
 //  function which runs the game
 function startGame() {
-    startButton.classList.add('hidden')
-    randomQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestion = 0
-    questionContainerElement.classList.remove('hidden')
-    nextQuestion()
+    startButton.classList.add('hidden');
+    randomQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestion = 0;
+    questionContainerElement.classList.remove('hidden');
+    nextQuestion();
 }
 
 // function to give the user the next question
 function nextQuestion() {
-    reset()
-    getQuestion(randomQuestions[currentQuestion])
+    reset();
+    getQuestion(randomQuestions[currentQuestion]);
 }
 
 // function to get the questions from the array
 function getQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('button')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('button');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', checkAnswer)
-        answerButtonsElement.appendChild(button)
-    })
+        button.addEventListener('click', checkAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 }
 
 // function to reset after the question has been answered
 function reset() {
-    nextButton.classList.add('hidden')
+    nextButton.classList.add('hidden');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
@@ -57,33 +57,33 @@ this function also checks if there are more questions in the array or not to
 either show a 'next' or 'play again' button
 */
 function checkAnswer(event) {
-    const selectedAnswer = event.target
-    const correct = selectedAnswer.dataset.correct
+    const selectedAnswer = event.target;
+    const correct = selectedAnswer.dataset.correct;
     Array.from(answerButtonsElement.children).forEach(button => {
-        setClass(button, button.dataset.correct)
-    })
+        setClass(button, button.dataset.correct);
+    });
     if (randomQuestions.length > currentQuestion + 1) {
-        nextButton.classList.remove('hidden')
+        nextButton.classList.remove('hidden');
     } else {
-        startButton.innerText = 'Play Again'
-        startButton.classList.remove('hidden')
+        startButton.innerText = 'Play Again';
+        startButton.classList.remove('hidden');
     }
 }
 
 // function to set the colours for both correct and incorrect answers (green = correct, red = incorrect)
 function setClass(element, correct) {
-    clearClass(element)
+    clearClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('incorrect')
+        element.classList.add('incorrect');
     }
 }
 
 // function that removes the colour effect of getting the answer right or wrong
 function clearClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('incorrect')
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
 }
 
 // function to add score for each correct answer
@@ -120,4 +120,4 @@ const questions = [
             { text: '18', correct: true }
         ]
     }
-]
+];
