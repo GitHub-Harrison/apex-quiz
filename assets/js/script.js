@@ -8,6 +8,10 @@ const answerButtonsElement = document.getElementById('answer-button')
 let randomQuestions, currentQuestion
 
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currentQuestion++
+    nextQuestion()
+})
 
 function startGame() {
 
@@ -46,8 +50,34 @@ function reset() {
     }
 }
 
-function checkAnswer() {
+function checkAnswer(event) {
+    const selectedAnswer = event.target
+    const correct = selectedAnswer.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (randomQuestions.length > currentQuestion + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Play Again'
+        startButton.classList.remove('hide')
+    }
+    nextButton.classList.remove('hidden')
+}
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('incorrect')
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('incorrect')
 }
 
 function addScore() {
@@ -62,6 +92,24 @@ const questions = [
             { text: 'Lifeline', correct: false },
             { text: 'Caustic', correct: false },
             { text: 'Seer', correct: false }
+        ]
+    },
+    {
+        question: 'How many characters start with the letter "C"?',
+        answers: [
+            { text: '0', correct: false },
+            { text: '1', correct: false },
+            { text: '4', correct: false },
+            { text: '2', correct: true }
+        ]
+    },
+    {
+        question: 'How many characters are currently in the game?',
+        answers: [
+            { text: '20', correct: false },
+            { text: '17', correct: false },
+            { text: '15', correct: false },
+            { text: '18', correct: true }
         ]
     }
 ]
