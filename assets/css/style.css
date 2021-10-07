@@ -3,12 +3,17 @@
     /* font-family: use the same font as project one  */
 }
 
+/* 
+overall colours, taken from an online source and modified to suit me 
+(still unsure on how it works exactly) 
+*/
 :root {
     --hue-neutral: 200;
     --hue-incorrect: 0;
     --hue-correct: 145;
 }
 
+/* styling for overall body */
 body {
     --hue: var(--hue-neutral);
 
@@ -22,14 +27,7 @@ body {
     background-color: hsl(var(--hue), 0%, 20%);
 }
 
-body.correct {
-    --hue: var(--hue-correct);
-}
-
-body.incorrect {
-    --hue: var(--hue-incorrect);
-}
-
+/* styling for the overall game area */
 .container {
     width: 1000px;
     max-width: 80%;
@@ -39,6 +37,7 @@ body.incorrect {
     box-shadow: 0 0 10px 2px;
 }
 
+/* styling for the answer area */
 .answer-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -46,6 +45,7 @@ body.incorrect {
     margin: 20px 0px;
 }
 
+/* overall button styling */
 .button {
     --hue: var(--hue-neutral);
     border: 1px solid hsl(var(--hue), 100%, 30%);
@@ -56,25 +56,30 @@ body.incorrect {
     outline: none;
 }
 
+/* styling to help the user see what answer they are hovering over */
 .button:hover {
     border-color: black;
 }
 
+/* styling to show the correct answer */
 .button.correct {
     --hue: var(--hue-correct);
     color: black;
 }
 
+/* styling to show the incorrect answer */
 .button.incorrect {
     --hue: var(--hue-incorrect);
 }
 
+/* start + next button styling */
 .start-button, .next-button {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;
 }
 
+/* styling for the next/start button div */
 .controls {
     display: flex;
     justify-content: center;
