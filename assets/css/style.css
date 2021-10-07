@@ -19,7 +19,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: hsl(var(--hue), 0%, 20%);
 }
 
 body.correct {
@@ -39,7 +39,7 @@ body.incorrect {
     box-shadow: 0 0 10px 2px;
 }
 
-.button-grid {
+.answer-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 10px;
