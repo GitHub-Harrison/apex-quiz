@@ -5,10 +5,9 @@
 
 /* 
 overall colours, taken from an online source and modified to suit me 
-(still unsure on how it works exactly) 
 */
 :root {
-    --hue-neutral: 200;
+    --hue-neutral: 30;
     --hue-incorrect: 0;
     --hue-correct: 145;
 }
@@ -30,7 +29,7 @@ body {
 
 /* styling for the overall game area */
 .container {
-    width: 1000px;
+    width: 800px;
     max-width: 80%;
     background-color: rgb(240, 240, 240);
     border-radius: 4px;
@@ -41,19 +40,20 @@ body {
 /* styling for the answer area */
 .answer-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 300px);
     grid-gap: 10px;
     margin: 20px 0px;
+    justify-content: center;
 }
 
 /* overall button styling */
 .button {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
+    border: 2px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: rgb(255, 253, 253);
     outline: none;
 }
 
