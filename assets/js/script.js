@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const restartButton = document.getElementById('restart-button');
 
 let randomQuestions, currentQuestion;
 
@@ -16,6 +17,7 @@ nextButton.addEventListener('click', () => {
 //  function which runs the game
 function startGame() {
     startButton.classList.add('hidden');
+    restartButton.classList.remove('hidden');
     randomQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     questionContainerElement.classList.remove('hidden');
