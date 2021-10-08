@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@900&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
-    /* font-family: use the same font as project one  */
+    font-family: 'Lato', sans-serif;
 }
 
 /* 
@@ -16,25 +18,34 @@ overall colours, taken from an online source and modified to suit me
 body {
     --hue: var(--hue-neutral);
 
+    position: relative;
     padding: 0;
     margin: 0;
-    display: flex;
+
+    display: grid;
     width: 100vw;
-    height: 800px;
+    height: 100vh;
+    
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 0%, 20%);
+    background-color: rgb(155, 139, 139);
     text-align: center;
 }
 
 /* styling for the overall game area */
 .container {
-    width: 800px;
+    width: 900px;
     max-width: 80%;
+
     background-color: rgb(240, 240, 240);
     border-radius: 4px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+
+    position: fixed;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 /* styling for the answer area */
