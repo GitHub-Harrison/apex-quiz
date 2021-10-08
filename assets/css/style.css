@@ -25,11 +25,13 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
-    
+
     justify-content: center;
     align-items: center;
     background-color: rgb(155, 139, 139);
     text-align: center;
+
+    font-weight: bold;
 }
 
 /* styling for the overall game area */
@@ -91,6 +93,11 @@ body {
     padding: 10px 20px;
 }
 
+/* restart button styling */
+#restart-button {
+    float: right;
+}
+
 /* styling for the next/start button div */
 .controls {
     display: flex;
@@ -101,4 +108,12 @@ body {
 /* .hidden hides the buttons when they are not needed */
 .hidden {
     display: none;
+}
+
+/* Code below for index html page */
+
+
+/* styling for embedded hyperlink to gamers guide */
+.gamers-guide {
+    text-decoration: none;
 }
