@@ -112,6 +112,18 @@ body {
 
 /* Code below for index html page */
 
+.grid-container {
+    display: grid;
+    grid-template-rows: 220px 100px 650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.grid-item {
+    display: grid;
+    padding: 10px;
+    border: 1px solid blue;
+}
 
 /* styling for embedded hyperlink to gamers guide */
 .gamers-guide {

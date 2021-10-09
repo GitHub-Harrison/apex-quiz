@@ -12,27 +12,51 @@
 </head>
 
 <body>
-<!-- Welcome.About section / consider css grid layout -->
-    <div id="about-div">
-        <h1>Welcome to my Apex Legends quiz!</h1>
-        <p>This quiz is based on a free to play battle royale game which I enjoy spending my free time playing.</p>
-    </div>
 
-    <div>
-        <h2>About</h2>
-        <p>You already know this quiz is based on Apex Legends but what you don't know
-            is all the questions are based around information from a website I previously created called
-            <a class="gamers-guide" href="https://github-harrison.github.io/Gamers-Guide/" target="_blank">Gamers Guide</a>
-            which is just a begginers guide to everything apex.
-        </p>
-        <p>If you've never played Apex Legends before I highly recommend checking out
-            <a class="gamers-guide" href="https://github-harrison.github.io/Gamers-Guide/" target="_blank">Gamers Guide</a>
-            just to prepare yourself before taking the quiz as you're more likely to get a higher score with the
-            information the site provides.</p>
-    </div>
-
-    <div>
-        <a href="quiz.html"><button>To Quiz!</button></a>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1>Welcome to my Apex Legends quiz!</h1>
+            <p>This quiz is based on a free to play battle royale game which I enjoy spending my free time playing.
+               <br> If you are an Apex Legends player or want to get straight into the quiz feel free to click the button below 
+                and begin answering the questions!
+            </p>
+            <p>However, if you have never heard of Apex Legends or would like to prepare yourself for the quiz scroll down to the 'Help' section 
+                where there is some useful information.
+            </p>
+        </div>
+        <div class="grid-item">
+            <a href="quiz.html"><button><h2>To Quiz!</h2></button></a>
+        </div>
+        <div class="grid-item">
+            <h2>Help</h2>
+            <p>The purpose of this quiz is to test how well you know the game Apex Legends, if you're like me then you should be able to score quite high.
+                <br> But judging by the fact you're currently reading the help section i'm guessing you are either new to Apex or have no idea what it is and that's okay.
+                <br> Below I will explain how you can prepare for the quiz and what type of questions you will come across.
+            </p>
+            <h3>How to prepare</h3>
+            <p>
+                Nobody likes to be unprepared for a quiz especially if it is a quiz on something you don't know, but you're in luck because I am about to provide you with
+                a cheat sheet of sort.
+            </p>
+            <p>
+                I say of sort as it's less like a sheet and more like a literal website that I had created previous to this quiz and as such this quiz is based
+                with the information provided in my guide in mind.
+                <br> Thus meaning if you were to check out the guide found here <a class="gamers-guide" href="https://github-harrison.github.io/Gamers-Guide/" target="_blank">Gamers Guide</a> 
+                you could give yourself an advantage over 
+                the people who dove straight into the quiz.
+            </p>
+            <h3>Questions</h3>
+            <p>Now you know where you can find some of the information needed to get a good score on the quiz, let me tell you what type of questions you can expect.</p>
+            <p>
+                For the most part these questions are all just general knowledge an Apex player should know such as:
+                <ul class="list">
+                    <li>How many guns the player can use.</li>
+                    <li>What type of characters there are.</li>
+                    <li>What items can be found in the game.</li>
+                </ul>
+                These are just a few to help you understand what information you might want to take in from the guide.
+            </p>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
