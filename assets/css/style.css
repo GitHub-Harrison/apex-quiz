@@ -132,6 +132,7 @@ body {
 .grid-item {
     display: grid;
     padding: 10px;
+    /* remove border once happy with layout */
     border: 1px solid blue;
 }
 
