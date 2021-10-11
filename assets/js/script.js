@@ -64,6 +64,9 @@ function checkAnswer(event) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setClass(button, button.dataset.correct);
     });
+    if (correct){
+        addScore();
+    }
     if (randomQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hidden');
     } else {
@@ -90,7 +93,8 @@ function clearClass(element) {
 
 // function to add score for each correct answer
 function addScore() {
-
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
 }
 
 // Where the list of questions and answers are stored
