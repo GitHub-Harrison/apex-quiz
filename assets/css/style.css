@@ -169,3 +169,13 @@ h2, h3 {
 #quiz-button:hover {
     border: 2px solid black;
 }
+
+/* styling for score */
+
+.scores {
+    background-color: green;
+    float: left;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+}
