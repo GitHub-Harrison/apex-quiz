@@ -34,7 +34,7 @@ function nextQuestion() {
     getQuestion(randomQuestions[currentQuestion]);
 }
 
-// function to get the questions from the array
+// function to get the questions from the array#
 function getQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
@@ -122,6 +122,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'How many characters start with the letter "C"?',
         answers: [
             { text: '0', correct: false },
@@ -131,6 +132,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'How many characters are currently in the game?',
         answers: [
             { text: '20', correct: false },
@@ -140,6 +142,7 @@ const questions = [
         ]
     },
     {
+        category: 'weapons',
         question: 'How many weapons are in Apex Legends at the moment?',
         answers: [
             { text: '25', correct: false },
@@ -167,6 +170,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'How many support characters are there?',
         answers: [
             { text: '2', correct: true },
@@ -176,6 +180,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'How many defensive characters are there?',
         answers: [
             { text: '6', correct: false },
@@ -185,6 +190,7 @@ const questions = [
         ]
     },
     {
+        category: 'attachments',
         question: 'What is the "Digital Threat" attachment?',
         answers: [
             { text: 'A Character Name', correct: false },
@@ -194,6 +200,7 @@ const questions = [
         ]
     },
     {
+        category: 'attachments',
         question: 'Which of these can currently be found as a level 4 item?',
         answers: [
             { text: 'Weapon Stocks', correct: false },
