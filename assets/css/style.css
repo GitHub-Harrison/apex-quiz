@@ -16,8 +16,6 @@ overall colours, taken from an online source and modified to suit me
 
 /* styling for overall body */
 body {
-    --hue: var(--hue-neutral);
-
     position: relative;
     padding: 0;
     margin: 0;

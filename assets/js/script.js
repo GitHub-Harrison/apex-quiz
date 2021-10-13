@@ -4,8 +4,10 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const restartButton = document.getElementById('restart-button');
+let questionImage = document.getElementById('question-img');
 
-let randomQuestions, currentQuestion;
+let randomQuestions, currentQuestion, randomise;
+let numQuestions = 3;
 
 // code to make the start and next button work
 startButton.addEventListener('click', startGame);
@@ -18,10 +20,12 @@ nextButton.addEventListener('click', () => {
 function startGame() {
     startButton.classList.add('hidden');
     restartButton.classList.remove('hidden');
-    randomQuestions = questions.sort(() => Math.random() - 0.5);
+    randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
+    randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;
     questionContainerElement.classList.remove('hidden');
     nextQuestion();
+    document.getElementById('score').innerText = 0;
 }
 
 // function to give the user the next question
@@ -34,7 +38,7 @@ function nextQuestion() {
 function getQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button');
+        let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('button');
         if (answer.correct) {
@@ -43,6 +47,13 @@ function getQuestion(question) {
         button.addEventListener('click', checkAnswer);
         answerButtonsElement.appendChild(button);
     });
+    if (question.image) {
+        questionImage.src = `assets/images/${question.image}`;
+        questionImage.classList.remove('hidden');
+    } else {
+        questionImage.src = "";
+        questionImage.classList.add('hidden');
+    }
 }
 
 // function to reset after the question has been answered
@@ -67,7 +78,7 @@ function checkAnswer(event) {
     if (correct){
         addScore();
     }
-    if (randomQuestions.length > currentQuestion + 1) {
+    if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 3) {
         nextButton.classList.remove('hidden');
     } else {
         startButton.innerText = 'Play Again';
@@ -100,7 +111,9 @@ function addScore() {
 // Where the list of questions and answers are stored
 const questions = [
     {
+        category: 'characters',
         question: 'Who is this character?',
+        image: 'character-images/bloodhound.png',
         answers: [
             { text: 'Bloodhound', correct: true },
             { text: 'Lifeline', correct: false },
