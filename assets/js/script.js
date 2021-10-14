@@ -24,7 +24,7 @@ function startGame() {
     restartButton.classList.remove('hidden');
     scoreIcon.classList.remove('hidden');
     homeIcon.classList.remove('hidden');
-    randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
+    randomise = questions.sort(() => Math.random() * 3); // randomise all questions
     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;
     questionContainerElement.classList.remove('hidden');

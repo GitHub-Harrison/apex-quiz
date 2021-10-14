@@ -16,7 +16,7 @@ overall colours, taken from an online source and modified to suit me
 
 /* styling for overall body */
 body {
-    position: relative;
+    position: absolute;
     padding: 0;
     margin: 0;
 
@@ -181,9 +181,11 @@ h2, h3 {
 /* styling for home icon on quiz game */
 
 .home {
-    background-color: blue;
+    background-color: rgb(125, 125, 161);
     float: right;
     border: 2px solid black;
     padding: 5px;
     font-weight: bold;
 }
+
+/* image styling */ 
