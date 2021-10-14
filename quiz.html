@@ -14,13 +14,13 @@
 <body>
 
     <!-- container div is for the overall game area -->
-    <div class="container grid-item">
-        <div class="score-area">
+    <main class="container grid-item">
+        <section class="score-area">
             <p class="scores">Score<br><span id="score">0</span></p>
-        </div>
+        </section>
 
         <!-- question container is the area where the question will be shown -->
-        <div id="question-container" class="hidden">
+        <section id="question-container" class="hidden">
             
             <img src="" alt="Question image" id="question-img" class="hidden">
             <!-- this h1 will be where the questions are shown, an image will show underneath or 
@@ -34,14 +34,14 @@
                 <button class="button">3</button>
                 <button class="button">4</button>
             </div>
-        </div>
+        </section>
         <!-- the underneath div is for the controls (start/next/play again) -->
-        <div class="controls">
+        <section class="controls">
             <button id="start-button" class="button">Start</button>
             <button id="next-button" class="button hidden">Next</button>
-        </div>
+        </section>
         <div><a href="quiz.html"><button id="restart-button" class="button hidden">Restart</button></a></div>
-    </div>
+    </main>
     
     <script src="assets/js/script.js"></script>
 </body>
