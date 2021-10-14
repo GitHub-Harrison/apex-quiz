@@ -19,4 +19,20 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ## Features
 
-* __
+* __Welcome Area__
+    * The first feature of this project is a welcome area on the landing page.
+    * This area is just to welcome users to the quiz and briefly explain what the quiz is about.
+
+![Welcome Area]()
+
+* __To Quiz Button__ 
+    * This feature is just a simple button which will take the user to the quiz game on click.
+
+![To Quiz Button]()
+
+* __Help Area__
+    * The final feature on the landing page is the help area.
+    * The help area has one main focus and that is to help the user by preparing them a little bit for the quiz, this is done by providing a reference to my previous project ("Gamers Guide" where they could find all the answers to the questions), as well as some example questions.
+
+![Help Area]()
+
