@@ -5,6 +5,7 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const restartButton = document.getElementById('restart-button');
 const scoreIcon = document.getElementById('score-icon');
+const homeIcon = document.getElementById('home-icon');
 
 let questionImage = document.getElementById('question-img');
 let randomQuestions, currentQuestion, randomise;
@@ -22,6 +23,7 @@ function startGame() {
     startButton.classList.add('hidden');
     restartButton.classList.remove('hidden');
     scoreIcon.classList.remove('hidden');
+    homeIcon.classList.remove('hidden');
     randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;

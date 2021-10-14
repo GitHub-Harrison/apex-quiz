@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <title>Apex Quiz</title>
 </head>
@@ -16,12 +18,13 @@
     <!-- container div is for the overall game area -->
     <main class="container grid-item">
         <section class="score-area">
-            <p class="scores hidden" id="score-icon" >Score:<br><span id="score">0</span></p>
+            <p class="scores hidden" id="score-icon">Score: <br> <span id="score">0</span></p>
+            <p class="home hidden" id="home-icon">Home <br> <i class="fas fa-home"></i></p>
         </section>
 
         <!-- question container is the area where the question will be shown -->
         <section id="question-container" class="hidden">
-            
+
             <img src="" alt="Question image" id="question-img" class="hidden">
             <!-- this h1 will be where the questions are shown, an image will show underneath or 
                     above the h1 for questions where an image is needed -->
@@ -42,7 +45,7 @@
         </section>
         <div><a href="quiz.html"><button id="restart-button" class="button hidden">Restart</button></a></div>
     </main>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
 

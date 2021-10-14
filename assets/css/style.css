@@ -177,3 +177,13 @@ h2, h3 {
     padding: 5px;
     font-weight: bold;
 }
+
+/* styling for home icon on quiz game */
+
+.home {
+    background-color: blue;
+    float: right;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+}
