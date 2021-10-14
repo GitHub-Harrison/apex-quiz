@@ -212,5 +212,90 @@ const questions = [
             { text: 'Barrel Stabilizer', correct: false },
             { text: 'Shotgun Bolts', correct: false }
         ]
+    },
+    {
+        question: 'How many different body shield levels are there?',
+        answers: [
+            { text: '4', correct: false },
+            { text: '2', correct: false },
+            { text: '5', correct: true },
+            { text: '3', correct: false }
+        ]
+    },
+    {
+        question: 'Which of these characters is a recon character?',
+        answers: [
+            { text: 'Crypto', correct: true },
+            { text: 'Caustic', correct: false },
+            { text: 'Lifeline', correct: false },
+            { text: 'Wattson', correct: false }
+        ]
+    },
+    {
+        question: 'What map feature allows you to bring your teammates back into the fight?',
+        answers: [
+            { text: 'Respawn Beacon', correct: true },
+            { text: 'Jump Tower', correct: false },
+            { text: 'Supply Ship', correct: false },
+            { text: 'Replicator', correct: false }
+        ]
+    },
+    {
+        question: 'Who developed Apex Legends?',
+        answers: [
+            { text: 'Electronic Arts', correct: false },
+            { text: 'Epic Games', correct: false },
+            { text: 'Respawn Entertainment', correct: true },
+            { text: 'Square Enix', correct: false }
+        ]
+    },
+    {
+        question: 'How many characters were released when Apex Legends first launched?',
+        answers: [
+            { text: '10', correct: false },
+            { text: '4', correct: false },
+            { text: '12', correct: false },
+            { text: '8', correct: true }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'How many classes of weapons are there?',
+        answers: [
+            { text: '5', correct: false },
+            { text: '7', correct: true },
+            { text: '3', correct: false },
+            { text: '6', correct: false }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'How many burst weapons are there?',
+        answers: [
+            { text: '0', correct: false },
+            { text: '2', correct: true },
+            { text: '1', correct: false },
+            { text: '3', correct: false }
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'How many weapon attachments are there (excluding optics)?',
+        answers: [
+            { text: '6', correct: false },
+            { text: '10', correct: false },
+            { text: '13', correct: false },
+            { text: '8', correct: true}
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'Which weapons attachment "Improves weapon handling and reduces aim drift"?',
+        answers: [
+            { text: 'Shotgun Bolts', correct: false },
+            { text: 'Barrel Stabilizer', correct: false },
+            { text: 'Extended Magazines', correct: false },
+            { text: 'Stocks', correct: true }
+        ]
     }
 ];
