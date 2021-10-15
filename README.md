@@ -93,3 +93,26 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ![Quiz Game Play Again](/documentation/readme-screenshots/quizgame-playagain.png)
 
+## Testing
+Whenever I added a new feature or function before I would add or commit the change I will first check that it works as planned in the browser. Some features or functions might not work entirely as planned but might still be commited and changed later.
+
+All the buttons in this project have been tested multiple times and are all working as expected, some of the buttons will have style properties changed before the final commit.
+
+I have tested the quiz game itself each time I make any change to the project to ensure it still works. It works as planned and is only showing a set number of questions to the user despite having a bank of more questions. These questions are randomised which allows the user to replay the quiz over and over again with a lower chance of getting the same questions again and again.
+
+The score function increases with each correct answer and is reset to 0 when the user restarts or clicks play again.
+
+The home icon redirects the user to the initial landing page as planned.
+
+The restart button takes the user back to the very start of the quiz where they are required to click the start button to begin as planned.
+
+The start button calls the start game function as planned and unhides the score, home icon, restart button as well as the question and answer area as intended.
+
+The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
+
+The questions with images are not showing as intended as seen below, this issue will hopefully be solved before the final commit otherwise removing the image related questions might be the only option.
+
+![Quiz Game Image Out of Frame](/documentation/readme-screenshots/quizgame-image-question-bug.png)
+
+## Validator Testing
+    * __HTML__
