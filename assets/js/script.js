@@ -7,9 +7,11 @@ const restartButton = document.getElementById('restart-button');
 const scoreIcon = document.getElementById('score-icon');
 const homeIcon = document.getElementById('home-icon');
 
+const categorySelect = document.getElementById('category-selection');
+
 let questionImage = document.getElementById('question-img');
 let randomQuestions, currentQuestion, randomise;
-let numQuestions = 3;
+let numQuestions = 5;
 
 // code to make the start and next button work
 startButton.addEventListener('click', startGame);
@@ -18,12 +20,28 @@ nextButton.addEventListener('click', () => {
     nextQuestion();
 });
 
+// category selection - not currently working 
+// let selectedCategory;
+// categorySelect.addEventListener('change', function () {
+//     selectedCategory = this.value;
+// });
+
 //  function which runs the game
 function startGame() {
     startButton.classList.add('hidden');
     restartButton.classList.remove('hidden');
     scoreIcon.classList.remove('hidden');
     homeIcon.classList.remove('hidden');
+    categorySelect.classList.add('hidden');
+
+    // if (this.value = "all") {
+    //     randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
+    //     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
+    // } else {
+    //     randomise = questions.sort(() => Math.random() - 0.5).filter((obj) => obj.category == selectedCategory);
+    //     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
+    // }
+    
     randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;
@@ -79,10 +97,10 @@ function checkAnswer(event) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setClass(button, button.dataset.correct);
     });
-    if (correct){
+    if (correct) {
         addScore();
     }
-    if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 3) {
+    if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 5) {
         nextButton.classList.remove('hidden');
     } else {
         startButton.innerText = 'Play Again';
@@ -113,333 +131,695 @@ function addScore() {
 }
 
 // Where the list of questions and answers are stored
-const questions = [
-    {
+const questions = [{
         category: 'characters',
         question: 'Who is this character?',
         image: 'character-images/bloodhound.png',
-        answers: [
-            { text: 'Bloodhound', correct: true },
-            { text: 'Lifeline', correct: false },
-            { text: 'Caustic', correct: false },
-            { text: 'Seer', correct: false }
+        answers: [{
+                text: 'Bloodhound',
+                correct: true
+            },
+            {
+                text: 'Lifeline',
+                correct: false
+            },
+            {
+                text: 'Caustic',
+                correct: false
+            },
+            {
+                text: 'Seer',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many characters start with the letter "C"?',
-        answers: [
-            { text: '0', correct: false },
-            { text: '1', correct: false },
-            { text: '4', correct: false },
-            { text: '2', correct: true }
+        answers: [{
+                text: '0',
+                correct: false
+            },
+            {
+                text: '1',
+                correct: false
+            },
+            {
+                text: '4',
+                correct: false
+            },
+            {
+                text: '2',
+                correct: true
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many characters are currently in the game?',
-        answers: [
-            { text: '20', correct: false },
-            { text: '17', correct: false },
-            { text: '15', correct: false },
-            { text: '18', correct: true }
+        answers: [{
+                text: '20',
+                correct: false
+            },
+            {
+                text: '17',
+                correct: false
+            },
+            {
+                text: '15',
+                correct: false
+            },
+            {
+                text: '18',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'How many weapons are in Apex Legends at the moment?',
-        answers: [
-            { text: '25', correct: false },
-            { text: '27', correct: true },
-            { text: '26', correct: false},
-            { text: '28', correct: false}
+        answers: [{
+                text: '25',
+                correct: false
+            },
+            {
+                text: '27',
+                correct: true
+            },
+            {
+                text: '26',
+                correct: false
+            },
+            {
+                text: '28',
+                correct: false
+            }
         ]
     },
     {
         question: 'How many maps does Apex Legends have?',
-        answers: [
-            { text: '1', correct: false },
-            { text: '3', correct: true },
-            { text: '4', correct: false },
-            { text: '2', correct: false }
+        answers: [{
+                text: '1',
+                correct: false
+            },
+            {
+                text: '3',
+                correct: true
+            },
+            {
+                text: '4',
+                correct: false
+            },
+            {
+                text: '2',
+                correct: false
+            }
         ]
     },
     {
         question: 'How much does Apex Legends cost?',
-        answers: [
-            { text: '£20', correct: false },
-            { text: '£30', correct: false },
-            { text: '£0', correct: true },
-            { text: '£10', correct: false }
+        answers: [{
+                text: '£20',
+                correct: false
+            },
+            {
+                text: '£30',
+                correct: false
+            },
+            {
+                text: '£0',
+                correct: true
+            },
+            {
+                text: '£10',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many support characters are there?',
-        answers: [
-            { text: '2', correct: true },
-            { text: '5', correct: false },
-            { text: '8', correct: false },
-            { text: '11', correct: false }
+        answers: [{
+                text: '2',
+                correct: true
+            },
+            {
+                text: '5',
+                correct: false
+            },
+            {
+                text: '8',
+                correct: false
+            },
+            {
+                text: '11',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many defensive characters are there?',
-        answers: [
-            { text: '6', correct: false },
-            { text: '4', correct: true },
-            { text: '2', correct: false },
-            { text: '0', correct: false}
+        answers: [{
+                text: '6',
+                correct: false
+            },
+            {
+                text: '4',
+                correct: true
+            },
+            {
+                text: '2',
+                correct: false
+            },
+            {
+                text: '0',
+                correct: false
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'What is the "Digital Threat" attachment?',
-        answers: [
-            { text: 'A Character Name', correct: false },
-            { text: 'A Weapon Attachment', correct: false },
-            { text: 'A Weapon Optic', correct: true },
-            { text: 'An Armour Piece', correct: false }
+        answers: [{
+                text: 'A Character Name',
+                correct: false
+            },
+            {
+                text: 'A Weapon Attachment',
+                correct: false
+            },
+            {
+                text: 'A Weapon Optic',
+                correct: true
+            },
+            {
+                text: 'An Armour Piece',
+                correct: false
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'Which of these can currently be found as a level 4 item?',
-        answers: [
-            { text: 'Weapon Stocks', correct: false },
-            { text: 'Extended Weapon Magazines', correct: true },
-            { text: 'Barrel Stabilizer', correct: false },
-            { text: 'Shotgun Bolts', correct: false }
+        answers: [{
+                text: 'Weapon Stocks',
+                correct: false
+            },
+            {
+                text: 'Extended Weapon Magazines',
+                correct: true
+            },
+            {
+                text: 'Barrel Stabilizer',
+                correct: false
+            },
+            {
+                text: 'Shotgun Bolts',
+                correct: false
+            }
         ]
     },
     {
         question: 'How many different body shield levels are there?',
-        answers: [
-            { text: '4', correct: false },
-            { text: '2', correct: false },
-            { text: '5', correct: true },
-            { text: '3', correct: false }
+        answers: [{
+                text: '4',
+                correct: false
+            },
+            {
+                text: '2',
+                correct: false
+            },
+            {
+                text: '5',
+                correct: true
+            },
+            {
+                text: '3',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'Which of these characters is a recon character?',
-        answers: [
-            { text: 'Crypto', correct: true },
-            { text: 'Caustic', correct: false },
-            { text: 'Lifeline', correct: false },
-            { text: 'Wattson', correct: false }
+        answers: [{
+                text: 'Crypto',
+                correct: true
+            },
+            {
+                text: 'Caustic',
+                correct: false
+            },
+            {
+                text: 'Lifeline',
+                correct: false
+            },
+            {
+                text: 'Wattson',
+                correct: false
+            }
         ]
     },
     {
         question: 'What map feature allows you to bring your teammates back into the fight?',
-        answers: [
-            { text: 'Respawn Beacon', correct: true },
-            { text: 'Jump Tower', correct: false },
-            { text: 'Supply Ship', correct: false },
-            { text: 'Replicator', correct: false }
+        answers: [{
+                text: 'Respawn Beacon',
+                correct: true
+            },
+            {
+                text: 'Jump Tower',
+                correct: false
+            },
+            {
+                text: 'Supply Ship',
+                correct: false
+            },
+            {
+                text: 'Replicator',
+                correct: false
+            }
         ]
     },
     {
         question: 'Who developed Apex Legends?',
-        answers: [
-            { text: 'Electronic Arts', correct: false },
-            { text: 'Epic Games', correct: false },
-            { text: 'Respawn Entertainment', correct: true },
-            { text: 'Square Enix', correct: false }
+        answers: [{
+                text: 'Electronic Arts',
+                correct: false
+            },
+            {
+                text: 'Epic Games',
+                correct: false
+            },
+            {
+                text: 'Respawn Entertainment',
+                correct: true
+            },
+            {
+                text: 'Square Enix',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many characters were released when Apex Legends first launched?',
-        answers: [
-            { text: '10', correct: false },
-            { text: '4', correct: false },
-            { text: '12', correct: false },
-            { text: '8', correct: true }
+        answers: [{
+                text: '10',
+                correct: false
+            },
+            {
+                text: '4',
+                correct: false
+            },
+            {
+                text: '12',
+                correct: false
+            },
+            {
+                text: '8',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'How many classes of weapons are there?',
-        answers: [
-            { text: '5', correct: false },
-            { text: '7', correct: true },
-            { text: '3', correct: false },
-            { text: '6', correct: false }
+        answers: [{
+                text: '5',
+                correct: false
+            },
+            {
+                text: '7',
+                correct: true
+            },
+            {
+                text: '3',
+                correct: false
+            },
+            {
+                text: '6',
+                correct: false
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'How many burst weapons are there?',
-        answers: [
-            { text: '0', correct: false },
-            { text: '2', correct: true },
-            { text: '1', correct: false },
-            { text: '3', correct: false }
+        answers: [{
+                text: '0',
+                correct: false
+            },
+            {
+                text: '2',
+                correct: true
+            },
+            {
+                text: '1',
+                correct: false
+            },
+            {
+                text: '3',
+                correct: false
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'How many weapon attachments are there (excluding optics)?',
-        answers: [
-            { text: '6', correct: false },
-            { text: '10', correct: false },
-            { text: '13', correct: false },
-            { text: '8', correct: true}
+        answers: [{
+                text: '6',
+                correct: false
+            },
+            {
+                text: '10',
+                correct: false
+            },
+            {
+                text: '13',
+                correct: false
+            },
+            {
+                text: '8',
+                correct: true
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'Which weapons attachment "Improves weapon handling and reduces aim drift"?',
-        answers: [
-            { text: 'Shotgun Bolts', correct: false },
-            { text: 'Barrel Stabilizer', correct: false },
-            { text: 'Extended Magazines', correct: false },
-            { text: 'Stocks', correct: true }
+        answers: [{
+                text: 'Shotgun Bolts',
+                correct: false
+            },
+            {
+                text: 'Barrel Stabilizer',
+                correct: false
+            },
+            {
+                text: 'Extended Magazines',
+                correct: false
+            },
+            {
+                text: 'Stocks',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'How many ammow types are there (Including the special ammo from care package weapons)?',
-        answers: [
-            { text: '5', correct: false },
-            { text: '7', correct: true },
-            { text: '3', corerct: false },
-            { text: '9', correct: false}
+        answers: [{
+                text: '5',
+                correct: false
+            },
+            {
+                text: '7',
+                correct: true
+            },
+            {
+                text: '3',
+                corerct: false
+            },
+            {
+                text: '9',
+                correct: false
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'How many different optics are there?',
-        answers: [
-            { text: '10', correct: true},
-            { text: '6', correct: false },
-            { text: '12', correct: false },
-            { text: '8', correct: false }
+        answers: [{
+                text: '10',
+                correct: true
+            },
+            {
+                text: '6',
+                correct: false
+            },
+            {
+                text: '12',
+                correct: false
+            },
+            {
+                text: '8',
+                correct: false
+            }
         ]
     },
     {
         question: 'How many healing items are in the game?',
-        answers: [
-            { text: '3', correct: false },
-            { text: '5', correct: true },
-            { text: '7', correct: false },
-            { text: '6', correct: false }
+        answers: [{
+                text: '3',
+                correct: false
+            },
+            {
+                text: '5',
+                correct: true
+            },
+            {
+                text: '7',
+                correct: false
+            },
+            {
+                text: '6',
+                correct: false
+            }
         ]
     },
     {
         question: 'What does an "Epic" level helmet do?',
-        answers: [
-            { text: '20% Headshot Damage Reduction', correct: false },
-            { text: '30% Headshot Damage Reduction', correct: false },
-            { text: '40% Headshot Damage Reduction', correct: false },
-            { text: '50% Headshot Damage Reduction', correct: true }
+        answers: [{
+                text: '20% Headshot Damage Reduction',
+                correct: false
+            },
+            {
+                text: '30% Headshot Damage Reduction',
+                correct: false
+            },
+            {
+                text: '40% Headshot Damage Reduction',
+                correct: false
+            },
+            {
+                text: '50% Headshot Damage Reduction',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'Which of these is not a "Light" ammo type weapon?',
-        answers: [
-            { text: 'R301-Carbine', correct: false },
-            { text: 'Wingman', correct: true },
-            { text: 'R-99', correct: false },
-            { text: 'G7-Scout', correct: false }
+        answers: [{
+                text: 'R301-Carbine',
+                correct: false
+            },
+            {
+                text: 'Wingman',
+                correct: true
+            },
+            {
+                text: 'R-99',
+                correct: false
+            },
+            {
+                text: 'G7-Scout',
+                correct: false
+            }
         ]
     },
     {
         category: 'attachments',
         question: 'Which attachment can only go on shotguns?',
-        answers: [
-            { text: 'Stocks', correct: false },
-            { text: 'Bolts', correct: true },
-            { text: 'Extended Magazines', correct: false },
-            { text: 'Barrel Stabilizers', correct: false}
+        answers: [{
+                text: 'Stocks',
+                correct: false
+            },
+            {
+                text: 'Bolts',
+                correct: true
+            },
+            {
+                text: 'Extended Magazines',
+                correct: false
+            },
+            {
+                text: 'Barrel Stabilizers',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'Which character is this?',
         image: 'character-images/loba.png',
-        answers: [
-            { text: 'Seer', correct: false },
-            { text: 'Loba', correct: true },
-            { text: 'Bangalore', correct: false },
-            { text: 'Wattson', correct: false }
+        answers: [{
+                text: 'Seer',
+                correct: false
+            },
+            {
+                text: 'Loba',
+                correct: true
+            },
+            {
+                text: 'Bangalore',
+                correct: false
+            },
+            {
+                text: 'Wattson',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'What role does this character play?',
         image: 'character-images/pathfinder.png',
-        answers: [
-            { text: 'recon', correct: true },
-            { text: 'support', correct: false },
-            { text: 'defensive', correct: false },
-            { text: 'offensive', correct: false }
+        answers: [{
+                text: 'Recon',
+                correct: true
+            },
+            {
+                text: 'Support',
+                correct: false
+            },
+            {
+                text: 'Defensive',
+                correct: false
+            },
+            {
+                text: 'Offensive',
+                correct: false
+            }
         ]
     },
     {
         category: 'characters',
         question: 'How many character roles are there?',
-        answers: [
-            { text: '4', correct: true },
-            { text: '3', correct: false },
-            { text: '6', correct: false },
-            { text: '5', correct: false }
+        answers: [{
+                text: '4',
+                correct: true
+            },
+            {
+                text: '3',
+                correct: false
+            },
+            {
+                text: '6',
+                correct: false
+            },
+            {
+                text: '5',
+                correct: false
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'What is this weapon called?',
         // Add image of Spitfire here
-        answers: [
-            { text: 'Hemlok', correct: false },
-            { text: 'Volt', correct: false },
-            { text: 'Prowler', correct: false },
-            { text: 'Spitfire', correct: true }
+        answers: [{
+                text: 'Hemlok',
+                correct: false
+            },
+            {
+                text: 'Volt',
+                correct: false
+            },
+            {
+                text: 'Prowler',
+                correct: false
+            },
+            {
+                text: 'Spitfire',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'What ammo type is the Hemlok?',
-        answers: [
-            { text: 'Light', correct: false },
-            { text: 'Heavy', correct: true },
-            { text: 'Sniper', correct: false },
-            { text: 'Energy', correct: false }
+        answers: [{
+                text: 'Light',
+                correct: false
+            },
+            {
+                text: 'Heavy',
+                correct: true
+            },
+            {
+                text: 'Sniper',
+                correct: false
+            },
+            {
+                text: 'Energy',
+                correct: false
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'What gun takes Energy ammo?',
-        answers: [
-            { text: 'Devotion', correct: true },
-            { text: 'P2020', correct: false },
-            { text: '30-30 Repeater', correct: false },
-            { text: 'Charge Rifle', correct: false }
+        answers: [{
+                text: 'Devotion',
+                correct: true
+            },
+            {
+                text: 'P2020',
+                correct: false
+            },
+            {
+                text: '30-30 Repeater',
+                correct: false
+            },
+            {
+                text: 'Charge Rifle',
+                correct: false
+            }
         ]
     },
     {
         catergory: 'weapons',
         question: 'What ammo type is this?',
         // Add energy ammo type image here
-        answers: [
-            { text: 'Light', correct: false },
-            { text: 'Arrows', correct: false },
-            { text: 'Shotgun', correct: false },
-            { text: 'Emergy', correct: true }
+        answers: [{
+                text: 'Light',
+                correct: false
+            },
+            {
+                text: 'Arrows',
+                correct: false
+            },
+            {
+                text: 'Shotgun',
+                correct: false
+            },
+            {
+                text: 'Emergy',
+                correct: true
+            }
         ]
     },
     {
         category: 'weapons',
         question: 'Which of these has always been in the care package?',
-        answers: [
-            { text: 'Spitfire', correct: false },
-            { text: 'Kraber', correct: true },
-            { text: 'Alternator', correct: false },
-            { text: 'Triple Take', correct: false }
+        answers: [{
+                text: 'Spitfire',
+                correct: false
+            },
+            {
+                text: 'Kraber',
+                correct: true
+            },
+            {
+                text: 'Alternator',
+                correct: false
+            },
+            {
+                text: 'Triple Take',
+                correct: false
+            }
         ]
     },
 ];
