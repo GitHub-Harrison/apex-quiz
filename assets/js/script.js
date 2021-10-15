@@ -24,7 +24,7 @@ function startGame() {
     restartButton.classList.remove('hidden');
     scoreIcon.classList.remove('hidden');
     homeIcon.classList.remove('hidden');
-    randomise = questions.sort(() => Math.random() * 3); // randomise all questions
+    randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;
     questionContainerElement.classList.remove('hidden');
@@ -223,6 +223,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'Which of these characters is a recon character?',
         answers: [
             { text: 'Crypto', correct: true },
@@ -250,6 +251,7 @@ const questions = [
         ]
     },
     {
+        category: 'characters',
         question: 'How many characters were released when Apex Legends first launched?',
         answers: [
             { text: '10', correct: false },
@@ -297,5 +299,145 @@ const questions = [
             { text: 'Extended Magazines', correct: false },
             { text: 'Stocks', correct: true }
         ]
-    }
+    },
+    {
+        category: 'weapons',
+        question: 'How many ammow types are there (Including the special ammo from care package weapons)?',
+        answers: [
+            { text: '5', correct: false },
+            { text: '7', correct: true },
+            { text: '3', corerct: false },
+            { text: '9', correct: false}
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'How many different optics are there?',
+        answers: [
+            { text: '10', correct: true},
+            { text: '6', correct: false },
+            { text: '12', correct: false },
+            { text: '8', correct: false }
+        ]
+    },
+    {
+        question: 'How many healing items are in the game?',
+        answers: [
+            { text: '3', correct: false },
+            { text: '5', correct: true },
+            { text: '7', correct: false },
+            { text: '6', correct: false }
+        ]
+    },
+    {
+        question: 'What does an "Epic" level helmet do?',
+        answers: [
+            { text: '20% Headshot Damage Reduction', correct: false },
+            { text: '30% Headshot Damage Reduction', correct: false },
+            { text: '40% Headshot Damage Reduction', correct: false },
+            { text: '50% Headshot Damage Reduction', correct: true }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'Which of these is not a "Light" ammo type weapon?',
+        answers: [
+            { text: 'R301-Carbine', correct: false },
+            { text: 'Wingman', correct: true },
+            { text: 'R-99', correct: false },
+            { text: 'G7-Scout', correct: false }
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'Which attachment can only go on shotguns?',
+        answers: [
+            { text: 'Stocks', correct: false },
+            { text: 'Bolts', correct: true },
+            { text: 'Extended Magazines', correct: false },
+            { text: 'Barrel Stabilizers', correct: false}
+        ]
+    },
+    {
+        category: 'characters',
+        question: 'Which character is this?',
+        answers: [
+            { text: 'Seer', correct: false },
+            { text: 'Loba', correct: true },
+            { text: 'Bangalore', correct: false },
+            { text: 'Wattson', correct: false }
+        ]
+    },
+    {
+        category: 'characters',
+        question: 'What role does this character play?',
+        answers: [
+            { text: 'recon', correct: true },
+            { text: 'support', correct: false },
+            { text: 'defensive', correct: false },
+            { text: 'offensive', correct: false }
+        ]
+    },
+    {
+        category: 'characters',
+        question: 'How many character roles are there?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '3', correct: false },
+            { text: '6', correct: false },
+            { text: '5', correct: false }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'What is this weapon called?',
+        // Add image of Spitfire here
+        answers: [
+            { text: 'Hemlok', correct: false },
+            { text: 'Volt', correct: false },
+            { text: 'Prowler', correct: false },
+            { text: 'Spitfire', correct: true }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'What ammo type is the Hemlok?',
+        answers: [
+            { text: 'Light', correct: false },
+            { text: 'Heavy', correct: true },
+            { text: 'Sniper', correct: false },
+            { text: 'Energy', correct: false }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'What gun takes Energy ammo?',
+        answers: [
+            { text: 'Devotion', correct: true },
+            { text: 'P2020', correct: false },
+            { text: '30-30 Repeater', correct: false },
+            { text: 'Charge Rifle', correct: false }
+        ]
+    },
+    {
+        catergory: 'weapons',
+        question: 'What ammo type is this?',
+        // Add energy ammo type image here
+        answers: [
+            { text: 'Light', correct: false },
+            { text: 'Arrows', correct: false },
+            { text: 'Shotgun', correct: false },
+            { text: 'Emergy', correct: true }
+        ]
+    },
+    {
+        category: 'weapons',
+        question: 'Which of these has always been in the care package?',
+        answers: [
+            { text: 'Spitfire', correct: false },
+            { text: 'Kraber', correct: true },
+            { text: 'Alternator', correct: false },
+            { text: 'Triple Take', correct: false }
+        ]
+    },
 ];
