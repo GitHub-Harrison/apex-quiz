@@ -171,7 +171,7 @@ h2, h3 {
 /* styling for score */
 
 .scores {
-    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(53, 175, 89);
     float: left;
     border: 2px solid black;
     padding: 5px;
@@ -182,7 +182,7 @@ h2, h3 {
 /* styling for home icon on quiz game */
 
 .home {
-    /* background-color: rgb(125, 125, 161); */
+    background-color: rgb(4, 154, 255);
     float: right;
     border: 2px solid black;
     padding: 5px;
