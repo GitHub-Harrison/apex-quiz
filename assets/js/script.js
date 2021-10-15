@@ -361,6 +361,7 @@ const questions = [
     {
         category: 'characters',
         question: 'Which character is this?',
+        image: 'character-images/loba.png',
         answers: [
             { text: 'Seer', correct: false },
             { text: 'Loba', correct: true },
@@ -371,6 +372,7 @@ const questions = [
     {
         category: 'characters',
         question: 'What role does this character play?',
+        image: 'character-images/pathfinder.png',
         answers: [
             { text: 'recon', correct: true },
             { text: 'support', correct: false },
