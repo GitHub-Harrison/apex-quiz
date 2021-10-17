@@ -11,7 +11,7 @@ const categorySelect = document.getElementById('category-selection');
 
 let questionImage = document.getElementById('question-img');
 let randomQuestions, currentQuestion, randomise;
-let numQuestions = 5;
+let numQuestions = 10;
 
 // code to make the start and next button work
 startButton.addEventListener('click', startGame);
@@ -100,7 +100,7 @@ function checkAnswer(event) {
     if (correct) {
         addScore();
     }
-    if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 5) {
+    if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 10) {
         nextButton.classList.remove('hidden');
     } else {
         startButton.innerText = 'Play Again';
@@ -718,7 +718,7 @@ const questions = [{
     {
         category: 'weapons',
         question: 'What is this weapon called?',
-        // Add image of Spitfire here
+        image: 'weapons/spitfire-resize.png',
         answers: [{
                 text: 'Hemlok',
                 correct: false
@@ -782,7 +782,7 @@ const questions = [{
     {
         catergory: 'weapons',
         question: 'What ammo type is this?',
-        // Add energy ammo type image here
+        image: 'ammo/energy-ammo.png',
         answers: [{
                 text: 'Light',
                 correct: false
@@ -822,4 +822,47 @@ const questions = [{
             }
         ]
     },
+    {
+        category: 'attachments',
+        question: 'What weapon optic is this?',
+        image: 'attachments/2x-hcog.png',
+        answers: [
+            { text: '1x-2x Variable', correct: false },
+            { text: '2x HCOG', correct: true },
+            { text: '3x HCOG', correct: false },
+            { text: '2x-4x Variable', correct: false }
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'What weapon type do these stocks fit?',
+        image: 'attachments/sniper-stock.png',
+        answers: [
+            { text: 'Assault Rifle', correct: false },
+            { text: 'Shotguns', correct: false },
+            { text: 'Pistols', correct: false },
+            { text: 'Snipers', correct: true }
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'How many weapon optics can only fit on snipers?',
+        answers: [
+            { text: '3', correct: true },
+            { text: '6', correct: false },
+            { text: '2', correct: false },
+            { text: '4', correct: false }
+        ]
+    },
+    {
+        category: 'attachments',
+        question: 'What is the zoom level on this optic?',
+        image: 'attachments/3x-hcog.png',
+        answers: [
+            { text: '4x Zoom', correct: false },
+            { text: '2x Zoom', correct: false },
+            { text: '3x Zoom', correct: true },
+            { text: '6x Zoom', correct: false }
+        ]
+    }
 ];
