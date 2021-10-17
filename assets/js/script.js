@@ -796,7 +796,7 @@ const questions = [{
                 correct: false
             },
             {
-                text: 'Emergy',
+                text: 'Energy',
                 correct: true
             }
         ]
