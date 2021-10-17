@@ -42,10 +42,9 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 
-    position: fixed;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* styling for the answer area */
@@ -193,3 +192,8 @@ h2, h3 {
 }
 
 /* image styling */ 
+img {
+    width: auto;
+    height: 80%;
+    justify-content: center;
+}
