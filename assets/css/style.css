@@ -197,3 +197,23 @@ img {
     width: auto;
     height: auto;
 }
+
+/* media queries - needs work*/
+
+@media (max-width: 950px) {
+    * {
+        flex-direction: flex;
+        float: none;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container .button .answer-grid .grid-container {
+        display: flex;
+    }
+}
