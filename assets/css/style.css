@@ -200,7 +200,7 @@ img {
 
 /* media queries - needs work*/
 
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
     * {
         flex-direction: flex;
         float: none;
@@ -216,4 +216,4 @@ img {
     .container .button .answer-grid .grid-container {
         display: flex;
     }
-}
+} */
