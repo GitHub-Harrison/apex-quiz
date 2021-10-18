@@ -213,7 +213,7 @@ img {
     body {
         display: flex;
     }
-    #question-container {
-        /* display: flex; */
-    }
+    /* #question-container {
+        display: flex; 
+    } */
 }
