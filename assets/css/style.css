@@ -200,20 +200,20 @@ img {
 
 /* media queries - needs work*/
 
-/* @media (max-width: 950px) {
+@media (max-width: 900px) {
     * {
-        flex-direction: flex;
-        float: none;
+        flex-direction: column;
+        overflow: hidden;
     }
     .container {
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 10px;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .container .button .answer-grid .grid-container {
+    body {
         display: flex;
     }
-} */
+    #question-container {
+        /* display: flex; */
+    }
+}
