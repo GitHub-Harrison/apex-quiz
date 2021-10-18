@@ -115,4 +115,52 @@ The questions with images are not showing as intended as seen below, this issue 
 ![Quiz Game Image Out of Frame](/documentation/readme-screenshots/quizgame-image-question-bug.png)
 
 ## Validator Testing
-    * __HTML__
+* HTML
+    * 2 errors showing when I ran the code through, the second error doesn't make sense as when I checked the code there was both a starting and closing p tag. [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
+
+![HTML Validator](/documentation/readme-screenshots/html-validator.png)
+
+* CSS
+    * No errors were found when I ran my code through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![CSS Validator](/documentation/readme-screenshots/css-validator.png)
+
+* JS Validator
+
+## Unfixed Bugs
+
+## Browser Compatibility
+
+## Deployment
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+    * In the GitHub repository, navigate to the settings tab
+    * From the settings tab scroll down until you see the 'pages' tab on the left
+    * From the source section drop-down menu, select the main branch
+    * Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - https://github-harrison.github.io/apex-quiz/
+
+## Local Deployment
+To make a local copy of this project, you can clone it by typing in your IDE terminal:
+* `git clone https://github.com/GitHub-Harrison/apex-quiz.git`
+
+Alternatively, if using Gitpod, you can click the green Gitpod button, or use [this link](https://gitpod.io/#https://github.com/GitHub-Harrison/apex-quiz)
+
+## Credits
+Not much of the content provided within this project has come from an outside source but here are the sources that helped me complete my project:
+### Code
+* Sources that helped me better understand some of the code I used
+    * https://codesalad.dev/blog/color-manipulation-with-css-variables-and-hsl-16
+    * https://www.w3schools.com/cssref/sel_root.asp
+    * https://stackoverflow.com/questions/29450654/javascript-can-you-add-images-to-an-array
+
+### Content
+* Sources from which I used their content for my benefit
+    * https://liquipedia.net/apexlegends/Legends
+
+From this source I took the character images they had and placed them within my character image folder.
+
+For the weapon screenshots, they were all taken from my previous project where I had taken screenshots of the weapons from within the game and resized the images.
+* The screenshots taken of the weapons/ammo/attachments were taken from my game account and cropped/merged in Photoshop.
+
+All the text on both the index.html and quiz.html pages was written by myself.
