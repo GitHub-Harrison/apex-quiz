@@ -110,10 +110,6 @@ The start button calls the start game function as planned and unhides the score,
 
 The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
 
-The questions with images are not showing as intended as seen below, this issue will hopefully be solved before the final commit otherwise removing the image related questions might be the only option.
-
-![Quiz Game Image Out of Frame](documentation/readme-screenshots/quizgame-image-question-bug.png)
-
 ## Validator Testing
 * HTML
     * 2 errors showing when I ran the code through, the second error doesn't make sense as when I checked the code there was both a starting and closing p tag. [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
@@ -128,6 +124,7 @@ The questions with images are not showing as intended as seen below, this issue 
 * JS Validator
 
 ## Unfixed Bugs
+* I am unaware of any bugs within this project.
 
 ## Browser Compatibility
 
