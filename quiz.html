@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <title>Apex Quiz</title>
 </head>
@@ -25,11 +26,11 @@
         <!-- question container is the area where the question will be shown -->
         <section id="question-container" class="hidden">
 
-            <img src="" alt="Question image" id="question-img" class="hidden">
+            <img src="#" alt="Question image" id="question-img" class="hidden">
             <!-- this h1 will be where the questions are shown, an image will show
                     above the h1 for questions where an image is needed -->
             <h1 id="question">Question</h1>
-            
+
             <!-- the underneath div is just for where the answers to the questions will be -->
             <div id="answer-buttons" class="answer-grid">
                 <button class="button">1</button>
@@ -45,14 +46,14 @@
             <option value="weapons">Weapon Questions</option>
             <option value="attachments">Attachment Questions</option>
         </select>
-        
-        
+
+
         <!-- the underneath div is for the controls (start/next/play again) -->
         <section class="controls">
             <button id="start-button" class="button">Start</button>
             <button id="next-button" class="button hidden">Next</button>
         </section>
-        <div><a href="quiz.html"><button id="restart-button" class="button hidden">Restart</button></a></div>
+        <div><a href="quiz.html" id="restart-button" class="button hidden">Restart</a></div>
     </main>
 
     <script src="assets/js/script.js"></script>
