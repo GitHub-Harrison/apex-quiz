@@ -2,7 +2,6 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
 }
 
 /* 
@@ -19,16 +18,16 @@ body {
     position: absolute;
     padding: 0;
     margin: 0;
-
+    
     display: grid;
     width: 100vw;
-    height: 100vh;
 
     justify-content: center;
     align-items: center;
     background-color: rgb(88, 85, 85);
-    text-align: center;
 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
 }
 
@@ -43,14 +42,16 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    margin: 40% auto;
 }
 
 /* styling for the answer area */
 .answer-grid {
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 20px 0px;
     justify-content: center;
@@ -115,7 +116,7 @@ body {
     padding: 10px;
     margin: 20px;
 
-    width: 100vw;
+    width: 100%;
     max-width: 80%;
 
     justify-content: center;
@@ -129,8 +130,9 @@ body {
 .grid-item {
     display: grid;
     padding: 10px;
+    grid-gap: 5px;
     /* remove border once happy with layout */
-    border: 1px solid blue;
+    border: 1px solid black;
 }
 
 /* styling for embedded hyperlink to gamers guide */
@@ -193,8 +195,8 @@ h2, h3 {
 
 /* image styling */ 
 img {
-    width: auto;
-    height: auto;
+    max-width: 100%;
+    max-height: 300px;
 }
 
 /* media queries - needs work*/
@@ -202,17 +204,13 @@ img {
 @media (max-width: 900px) {
     * {
         flex-direction: column;
-        overflow: hidden;
     }
     .container {
         width: 100%;
-        margin: 0;
+        margin: 40% auto;
         padding: 10px;
     }
     body {
         display: flex;
     }
-    /* #question-container {
-        display: flex; 
-    } */
 }
