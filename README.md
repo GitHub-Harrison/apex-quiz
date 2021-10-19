@@ -56,7 +56,7 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ![Quiz Game Text Question](documentation/readme-screenshots/quizgame-question-text.png)
 
-![Quiz Game Image Question](documentation/readme-screenshots/)
+![Quiz Game Image Question](documentation/readme-screenshots/quiz-image-question.png)
 
 * __Quiz Game Answer Area__
     * This is the area where the answers will be displayed for the user to see and choose from.
@@ -98,33 +98,37 @@ Before I started any of the coding I first created some wireframes for how I env
 ## Testing
 Whenever I added a new feature or function before I would add or commit the change I will first check that it works as planned in the browser. Some features or functions might not work entirely as planned but might still be commited and changed later.
 
-All the buttons in this project have been tested multiple times and are all working as expected, some of the buttons will have style properties changed before the final commit.
+* All the buttons in this project have been tested multiple times and are all working as expected, some of the buttons will have style properties changed before the final commit.
 
-I have tested the quiz game itself each time I make any change to the project to ensure it still works. It works as planned and is only showing a set number of questions to the user despite having a bank of more questions. These questions are randomised which allows the user to replay the quiz over and over again with a lower chance of getting the same questions again and again.
+* I have tested the quiz game itself each time I make any change to the project to ensure it still works. It works as planned and is only showing a set number of questions to the user despite having a bank of more questions. These questions are randomised which allows the user to replay the quiz over and over again with a lower chance of getting the same questions again and again.
 
-The score function increases with each correct answer and is reset to 0 when the user restarts or clicks play again.
+* The score function increases with each correct answer and is reset to 0 when the user restarts or clicks play again.
 
-The home icon redirects the user to the initial landing page as planned.
+* The home icon redirects the user to the initial landing page as planned.
 
-The restart button takes the user back to the very start of the quiz where they are required to click the start button to begin as planned.
+* The restart button takes the user back to the very start of the quiz where they are required to click the start button to begin as planned.
 
-The start button calls the start game function as planned and unhides the score, home icon, restart button as well as the question and answer area as intended.
+* The start button calls the start game function as planned and unhides the score, home icon, restart button as well as the question and answer area as intended.
 
-The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
+* The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
 
-* Below is a video I recorded of myself testing all of the features and ensuring they all work before the final commit.
+Instead of taking screenshots for each test done, instead I recorded a video of myself testing all the features before the final commit.
 
-## Video Testing
+## Video of Testing
 
-* [![Final Testing Video](http://img.youtube.com/vi/OqTENNKqhFo/0.jpg)](https://www.youtube.com/watch?v=OqTENNKqhFo "Apex Quiz Final Tests")
+### All tests can be viewed on the YouTube video below.
+
+[![Final Testing Video](http://img.youtube.com/vi/OqTENNKqhFo/0.jpg)](https://www.youtube.com/watch?v=OqTENNKqhFo "Apex Quiz Final Tests")
 
 
 
 ## Validator Testing
 * HTML
     * No errors were found when I ran my code through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
+    * Below are screen shots of both the index.html and quiz.html validator tests by direct input.
 
-![HTML Validator](documentation/readme-screenshots/html-validator.png)
+![HTML index.html Validator](documentation/readme-screenshots/html-index-validator.png)
+![HTML quiz.html Validator](documentation/readme-screenshots/quiz-html-validator.png)
 
 * CSS
     * No errors were found when I ran my code through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
