@@ -94,6 +94,15 @@ body {
 /* restart button styling */
 #restart-button {
     float: right;
+    background-color: rgb(187, 187, 187);
+    border: 1px solid rgb(0, 0, 0);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#restart-button:hover {
+    border: 2px solid black;
 }
 
 /* styling for the next/start button div */
@@ -131,8 +140,11 @@ body {
     display: grid;
     padding: 10px;
     grid-gap: 5px;
-    /* remove border once happy with layout */
+}
+
+#welcome-section, #help-section {
     border: 1px solid black;
+    margin: 10px;
 }
 
 /* styling for embedded hyperlink to gamers guide */
@@ -161,8 +173,9 @@ h2, h3 {
     padding: 10px 20px;
     justify-content: center;
 
-    background-color: hsl(var(--hue), 100%, 40%);
+    background-color: rgb(187, 187, 187);
     color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 #quiz-button:hover {
@@ -174,7 +187,7 @@ h2, h3 {
 .scores {
     background-color: rgb(53, 175, 89);
     float: left;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 5px;
     font-weight: bold;
     color: rgb(0, 0, 0);
@@ -185,12 +198,16 @@ h2, h3 {
 .home {
     background-color: rgb(4, 154, 255);
     float: right;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 5px;
     font-weight: bold;
 
     text-decoration: none;
     color: black;
+}
+
+.home:hover {
+    border: 2px solid black;
 }
 
 /* image styling */ 
