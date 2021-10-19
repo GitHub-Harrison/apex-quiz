@@ -115,7 +115,7 @@ The questions are pulled and displayed to the user as expected and the answers t
 
 ## Validator Testing
 * HTML
-    * 2 errors showing when I ran the code through, the second error doesn't make sense as when I checked the code there was both a starting and closing p tag. [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
+    * No errors were found when I ran my code through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
 
 ![HTML Validator](documentation/readme-screenshots/html-validator.png)
 
@@ -125,12 +125,23 @@ The questions are pulled and displayed to the user as expected and the answers t
 ![CSS Validator](documentation/readme-screenshots/css-validator.png)
 
 * JS Validator
+    * No errors were found when I ran my code through the official jshint validator.
+
+![JS Validator](documentation/readme-screenshots/jshint-validator.png)
 
 ## Unfixed Bugs
 * I am unaware of any bugs within this project.
 
 ## Browser Compatibility
 
+* I have tested this project on Firefox, Brave and Google Chrome (Chrome was tested from my mobile), during these tests I did not notice any browser compatibility issues.
+* Below are some screenshots of what the project looks like on different browsers/screensizes.
+
+![Firefox landing page](documentation/readme-screenshots/home-firefox.png)
+![Firefox Quiz Area](documentation/readme-screenshots/quiz-game-area-firefox.png)
+![Brave Quiz Area](documentation/readme-screenshots/quiz-game-area-brave.png)
+![Brave Inspect iPhone X](documentation/readme-screenshots/iphone-x-brave-inspect.png)
+![Huawei chrome browser](documentation/readme-screenshots/huawei-chrome.png)
 ## Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
     * In the GitHub repository, navigate to the settings tab
@@ -157,10 +168,12 @@ Not much of the content provided within this project has come from an outside so
 ### Content
 * Sources from which I used their content for my benefit
     * https://liquipedia.net/apexlegends/Legends
+    * https://www.ea.com/en-gb/games/apex-legends
 
-From this source I took the character images they had and placed them within my character image folder.
+From the first source I took the character images they had and placed them within my character image folder.
 
 For the weapon screenshots, they were all taken from my previous project where I had taken screenshots of the weapons from within the game and resized the images.
 * The screenshots taken of the weapons/ammo/attachments were taken from my game account and cropped/merged in Photoshop.
+* The weapons/ammo/attachments all belong to the official creators of Apex Legends which is the second source for content provided above.
 
 All the text on both the index.html and quiz.html pages was written by myself.
