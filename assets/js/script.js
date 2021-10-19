@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const questionContainerElement = document.getElementById('question-container');
@@ -21,10 +23,11 @@ nextButton.addEventListener('click', () => {
 });
 
 // category selection - not currently working 
-// let selectedCategory;
-// categorySelect.addEventListener('change', function () {
-//     selectedCategory = this.value;
-// });
+let selectedCategory;
+categorySelect.addEventListener('change', function () {
+    selectedCategory = this.value;
+    
+});
 
 //  function which runs the game
 function startGame() {
@@ -33,17 +36,17 @@ function startGame() {
     scoreIcon.classList.remove('hidden');
     homeIcon.classList.remove('hidden');
     categorySelect.classList.add('hidden');
-
-    // if (this.value = "all") {
-    //     randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
-    //     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
-    // } else {
-    //     randomise = questions.sort(() => Math.random() - 0.5).filter((obj) => obj.category == selectedCategory);
-    //     randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
-    // }
+    console.log(selectedCategory);
+    if (selectedCategory === "all") {
+        randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
+        randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
+    } else {
+        randomise = questions.sort(() => Math.random() - 0.5).filter((obj) => obj.category == selectedCategory);
+        randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
+    }
     
-    randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
-    randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
+    // randomise = questions.sort(() => Math.random() - 0.5); // randomise all questions
+    // randomQuestions = randomise.slice(0, numQuestions); // grab the first n questions
     currentQuestion = 0;
     questionContainerElement.classList.remove('hidden');
     nextQuestion();
