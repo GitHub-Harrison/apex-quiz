@@ -1,7 +1,8 @@
 # Apex Quiz Game
 Apex Quiz is a basic quiz game made using HTML, CSS and JavaScript. The purpose of this particular quiz is to test the user on their basic knowledge of the game Apex Legends. 
 I understand that not everyone who finds this quiz will know about Apex, with this in mind I have also linked my previous project in the About/Help section on the landing page this allows the user to prepare themselves for the quiz.
-(Insert am i responsive screenshot here)
+
+![Am I Responsive Screenshot](documentation/readme-screenshots/am-i-responsive.png)
 
 ## Wireframes
 Before I started any of the coding I first created some wireframes for how I envisioned the project to look.
@@ -46,7 +47,7 @@ Before I started any of the coding I first created some wireframes for how I env
     * This allows for replayability which I think is important in any type of game.
     * In the below screenshot you can see there are multiple features shown which will be covered underneath.
 
-![Quiz Game Area](documentation/readme-screenshots/quizgame-area.png)
+![Quiz Game Area](documentation/readme-screenshots/quiz-game-area.png)
 
 * __Quiz Game Question Area__
     * This is the area in which the questions will be displayed 
@@ -68,19 +69,19 @@ Before I started any of the coding I first created some wireframes for how I env
     * Within the quiz game area located on the top right is a home icon which will redirect the user back to the initial landing page.
     * This allows users to read over the help area again if they require a little extra help.
 
-![Quiz Home Icon](documentation/readme-screenshots/quizgame-home.png)
+![Quiz Home Icon](documentation/readme-screenshots/quiz-home-icon.png)
 
 * __Quiz Game Score Icon__
     * The score feature like in most games is just there to help the user keep track of how well they are doing.
     * It is located on the top left of the game area.
 
-![Quiz Score Icon](documentation/readme-screenshots/quizgame-score.png)
+![Quiz Score Icon](documentation/readme-screenshots/quiz-score-icon.png)
 
 * __Quiz Game Restart Button__ 
     * This feature works similar to the home button except instead of redirecting to the landing page it takes the user back to the very start of the quiz.
     * This allows the user to restart the quiz if they are not doing as well as they hoped or just fancy starting again.
 
-![Quiz Restart Button](documentation/readme-screenshots/quizgame-restart-button.png)
+![Quiz Restart Button](documentation/readme-screenshots/quiz-restart-button.png)
 
 * __Quiz Game Next Button__
     * This feature only appears after the user has answered the question and will disappear once the next question appears until they answer that one.
@@ -109,6 +110,8 @@ The restart button takes the user back to the very start of the quiz where they 
 The start button calls the start game function as planned and unhides the score, home icon, restart button as well as the question and answer area as intended.
 
 The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
+
+
 
 ## Validator Testing
 * HTML
