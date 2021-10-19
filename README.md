@@ -39,6 +39,7 @@ Before I started any of the coding I first created some wireframes for how I env
 
 * __Quiz Start__ 
     * After the user clicks the "To Quiz!" button they will be redirected to the quiz game page, where they will be greated by a 'Start' button which will call the 'startGame' function allowing the user to begin the quiz.
+    * Along with the quiz start there is also a category select, this allows the user to pick the questions they get from 4 options (All, Characters, Weapons or Attachments)
 
 ![Quiz Start Button](documentation/readme-screenshots/quizgame-start.png)
 
@@ -110,6 +111,12 @@ The restart button takes the user back to the very start of the quiz where they 
 The start button calls the start game function as planned and unhides the score, home icon, restart button as well as the question and answer area as intended.
 
 The questions are pulled and displayed to the user as expected and the answers to the questions are also pulled and displayed as expected.
+
+* Below is a video I recorded of myself testing all of the features and ensuring they all work before the final commit.
+
+## Video Testing
+
+* [![Final Testing Video](http://img.youtube.com/vi/OqTENNKqhFo/0.jpg)](https://www.youtube.com/watch?v=OqTENNKqhFo "Apex Quiz Final Tests")
 
 
 
