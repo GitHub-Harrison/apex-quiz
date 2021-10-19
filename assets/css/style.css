@@ -42,7 +42,7 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 
-    margin: 20% auto;
+    margin: 15% auto;
 }
 
 /* styling for the answer area */
@@ -232,7 +232,7 @@ img {
     }
     .container {
         width: 100%;
-        margin: 40% auto;
+        margin: 5% auto;
         padding: 10px;
     }
     body {
