@@ -124,8 +124,8 @@ Instead of taking screenshots for each test done, instead I recorded a video of 
 
 ## Validator Testing
 * HTML
-    * No errors were found when I ran my code through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
-    * Below are screen shots of both the index.html and quiz.html validator tests by direct input.
+    * No errors but 1 warning was found when I ran my index.html code through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2F)
+    * No errors but 2 warnings were found when I ran my quiz.html code through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub-harrison.github.io%2Fapex-quiz%2Fquiz.html)
 
 ![HTML index.html Validator](documentation/readme-screenshots/html-index-validator.png)
 ![HTML quiz.html Validator](documentation/readme-screenshots/quiz-html-validator.png)
@@ -149,9 +149,13 @@ Instead of taking screenshots for each test done, instead I recorded a video of 
 * Below are some screenshots of what the project looks like on different browsers/screensizes.
 
 ![Firefox landing page](documentation/readme-screenshots/home-firefox.png)
+
 ![Firefox Quiz Area](documentation/readme-screenshots/quiz-game-area-firefox.png)
+
 ![Brave Quiz Area](documentation/readme-screenshots/quiz-game-area-brave.png)
+
 ![Brave Inspect iPhone X](documentation/readme-screenshots/iphone-x-brave-inspect.png)
+
 ![Huawei chrome browser](documentation/readme-screenshots/huawei-chrome.png)
 ## Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
