@@ -95,6 +95,17 @@ Before I started any of the coding I first created some wireframes for how I env
 
 ![Quiz Game Play Again](documentation/readme-screenshots/quizgame-playagain.png)
 
+## Technologies Used
+During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
+
+* [HTML](https://en.wikipedia.org/wiki/HTML) - I used HTML for the structure of the overall project and information on the landing page.
+* [CSS](https://en.wikipedia.org/wiki/CSS) - I used CSS for overall styling for all project features.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - I used JavaScript to create the actual game functions and question/answer library.
+* [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in once place, as well as where the project was deployed.
+* [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
+* [Photoshop](https://www.adobe.com/uk/products/photoshop.html) - I used Adobe Photoshop to rezise the screenshots of the weapons/ammo/attachments that I had taken from within the game.
+* [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final tests for the project.
+
 ## Testing
 Whenever I added a new feature or function before I would add or commit the change I will first check that it works as planned in the browser. Some features or functions might not work entirely as planned but might still be commited and changed later.
 
@@ -119,8 +130,6 @@ Instead of taking screenshots for each test done, instead I recorded a video of 
 ### All tests can be viewed on the YouTube video below.
 
 [![Final Testing Video](http://img.youtube.com/vi/OqTENNKqhFo/0.jpg)](https://www.youtube.com/watch?v=OqTENNKqhFo "Apex Quiz Final Tests")
-
-
 
 ## Validator Testing
 * HTML
