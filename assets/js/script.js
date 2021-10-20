@@ -22,7 +22,7 @@ nextButton.addEventListener('click', () => {
     nextQuestion();
 });
 
-// category selection - not currently working 
+// category selection
 let selectedCategory;
 categorySelect.addEventListener('change', function () {
     selectedCategory = this.value;
@@ -105,8 +105,8 @@ function checkAnswer(event) {
     if (randomQuestions.length > currentQuestion + 1 || currentQuestion >= 10) {
         nextButton.classList.remove('hidden');
     } else {
-        startButton.innerText = 'Play Again';
-        startButton.classList.remove('hidden');
+        restartButton.innerText = 'Play Again';
+        restartButton.style.background = 'cyan';
     }
 }
 
